@@ -2125,7 +2125,7 @@ startup, because it must satisfy the singleton's dependencies. The lazy-initiali
 is injected into a singleton bean elsewhere that is not lazy-initialized.
 
 You can also control lazy-initialization at the container level by using the
-`default-lazy-init` attribute on the `<beans/>` element, a the following example shows:
+`default-lazy-init` attribute on the `<beans/>` element, as the following example shows:
 
 [source,xml,indent=0,subs="verbatim,quotes"]
 ----
@@ -5477,7 +5477,7 @@ references do not participate in regular candidate selection and are therefore i
 particular never primary. On the contrary, they always end up as lowest precedence.
 In practice, you should use self references as a last resort only (for example, for
 calling other methods on the same instance through the bean's transactional proxy).
-Consider factoring out the effected methods to a separate delegate bean in such a scenario.
+Consider factoring out the affected methods to a separate delegate bean in such a scenario.
 Alternatively, you can use `@Resource`, which may obtain a proxy back to the current bean
 by its unique name.
 
@@ -6842,7 +6842,7 @@ beans of prototype scope. For other scopes, the factory method only ever sees th
 injection point that triggered the creation of a new bean instance in the given scope
 (for example, the dependency that triggered the creation of a lazy singleton bean).
 You can use the provided injection point metadata with semantic care in such scenarios.
-The following example shows how to do use `InjectionPoint`:
+The following example shows how to use `InjectionPoint`:
 
 [source,java,indent=0,subs="verbatim,quotes",role="primary"]
 .Java
